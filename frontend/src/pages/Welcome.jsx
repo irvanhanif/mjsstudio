@@ -59,8 +59,7 @@ function Welcome() {
         <div
           id="carouselExampleCaptions"
           className="carousel slide"
-          data-bs-ride="carousel"
-        >
+          data-bs-ride="carousel">
           <div className="carousel-indicators">
             <button
               type="button"
@@ -68,24 +67,27 @@ function Welcome() {
               data-bs-slide-to="0"
               className="active"
               aria-current="true"
-              aria-label="Slide 1"
-            ></button>
+              aria-label="Slide 1"></button>
             <button
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
+              aria-label="Slide 2"></button>
             <button
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
+              aria-label="Slide 3"></button>
           </div>
           <div className="carousel-inner">
-            <div className="carousel-item active" data-bs-interval="2500">
-              <img src={foto1} className="d-block w-100" alt="..." />
+            <div
+              className="carousel-item active"
+              data-bs-interval="2500">
+              <img
+                src={foto1}
+                className="d-block w-100"
+                alt="..."
+              />
               <div className="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>
@@ -93,8 +95,14 @@ function Welcome() {
                 </p>
               </div>
             </div>
-            <div className="carousel-item" data-bs-interval="2500">
-              <img src={foto2} className="d-block w-100" alt="..." />
+            <div
+              className="carousel-item"
+              data-bs-interval="2500">
+              <img
+                src={foto2}
+                className="d-block w-100"
+                alt="..."
+              />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>
@@ -102,8 +110,14 @@ function Welcome() {
                 </p>
               </div>
             </div>
-            <div className="carousel-item" data-bs-interval="2500">
-              <img src={foto3} className="d-block w-100" alt="..." />
+            <div
+              className="carousel-item"
+              data-bs-interval="2500">
+              <img
+                src={foto3}
+                className="d-block w-100"
+                alt="..."
+              />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>
@@ -128,7 +142,7 @@ function Welcome() {
                   </div>
                 </div>
               </Link>
-              <Link>
+              <Link to={"/book"}>
                 <div className="card col-sm-4">
                   <div className="card-body">
                     <h5 className="card-title">Booking Studio</h5>
@@ -142,7 +156,9 @@ function Welcome() {
               <h4>Tentang Kami</h4>
             </label>
             <div className="profile-body row">
-              <div className="card mb-3" style={{ maxWidth: "100%" }}>
+              <div
+                className="card mb-3"
+                style={{ maxWidth: "100%" }}>
                 <div className="row g-0">
                   <div className="col-md-4 image-logo">
                     <img
@@ -195,8 +211,7 @@ function Welcome() {
                 freeMode={true}
                 pagination={{ clickable: true, dynamicBullets: false }}
                 modules={[Autoplay, FreeMode, Pagination]}
-                className="mySwiper"
-              >
+                className="mySwiper">
                 <SwiperSlide>
                   <div className="card col-12">
                     <div className="card-body">
@@ -363,8 +378,7 @@ function Welcome() {
                     : isHoverRight
                     ? "hoverBtnRight"
                     : ""
-                }`}
-              >
+                }`}>
                 <SwiperSlide>
                   <div className="row d-flex justify-content-center">
                     <div className="card col-lg-12 col-sm-8">

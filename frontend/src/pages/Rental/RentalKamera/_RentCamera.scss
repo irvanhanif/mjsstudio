@@ -44,8 +44,7 @@
           border: none;
 
           &:focus {
-            -webkit-box-shadow: none;
-            outline: -webkit-focus-ring-color auto 0px;
+            border: none;
           }
 
           .react-select__control {

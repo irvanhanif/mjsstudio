@@ -1,0 +1,35 @@
+.SidebarSection {
+  height: 100vh;
+  position: fixed;
+  transition: 0.25s;
+  z-index: 10;
+
+  &.clicked {
+    width: 100%;
+    transition: 0.25s;
+    background: linear-gradient(
+      to left,
+      rgb(255, 255, 255, 0.35),
+      rgb(0, 0, 0, 0.75)
+    );
+  }
+
+  .sidebar {
+    width: 280px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    & {
+      transform: translateX(-280px);
+      transition: 0.5s;
+
+      &.clicked {
+        transform: translateX(0px);
+        transition: 0.5s;
+      }
+    }
+  }
+  .sidebar {
+    height: 100%;
+  }
+}

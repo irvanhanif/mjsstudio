@@ -1,10 +1,6 @@
 import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-// pages
-import Welcome from "./pages/Welcome";
-import RentCamera from "./pages/RentalKamera/RentCamera";
-import RentDetail from "./pages/RentalDetail/RentDetail";
+import routeApp from "./Route";
 
 // fontawesome
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -17,9 +13,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/rent" element={<RentCamera />} />
-        <Route path="/rent/:id" element={<RentDetail />} />
+        {routeApp.map((routerApp, index) => (
+          <Route
+            key={index}
+            path={routerApp.path}
+            element={routerApp.element}
+          />
+        ))}
       </Routes>
     </BrowserRouter>
   );

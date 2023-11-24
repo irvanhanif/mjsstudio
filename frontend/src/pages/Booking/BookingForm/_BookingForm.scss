@@ -1,0 +1,59 @@
+.BookingFormPage {
+  padding-top: 100px;
+  min-height: 100vh;
+
+  .container {
+    padding-bottom: 25px;
+
+    textarea {
+      resize: none;
+      overflow: hidden;
+    }
+
+    .day,
+    .time {
+      .input-group-text {
+        width: 80px;
+      }
+    }
+    .day {
+      span {
+        border-bottom-left-radius: 0;
+        border-bottom: 0;
+      }
+      div {
+        border-bottom-right-radius: 0;
+        border-bottom: 0;
+      }
+    }
+    .time {
+      span {
+        border-top-left-radius: 0;
+      }
+      div {
+        border-top-right-radius: 0;
+      }
+    }
+    input:focus {
+      border: var(--bs-border-width) solid var(--bs-border-color);
+    }
+    @include media-breakpoint-down(sm) {
+      .card {
+        .input-group {
+          .input-group-text {
+            width: 100%;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: var(--bs-border-radius) !important;
+          }
+          div {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: var(--bs-border-radius) !important;
+          }
+        }
+        .day {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import banner from "../../files/images/bannerrental.jpg";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
+import banner from "../../../files/images/bannerrental.jpg";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
-import foto from "../../files/images/gambar2.jpg";
+import foto from "../../../files/images/gambar2.jpg";
 
 const options = [
   { value: "chocolate", label: "Chocolate" },
@@ -151,7 +151,11 @@ function RentCamera() {
       <Navbar />
       <div className="section-top">
         <div className="banner">
-          <img src={banner} alt="" className="w-100" />
+          <img
+            src={banner}
+            alt=""
+            className="w-100"
+          />
         </div>
       </div>
       <div className="dataKamera">
@@ -201,10 +205,13 @@ function RentCamera() {
               currentItems.map((item, i) => (
                 <div
                   key={i}
-                  className="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch"
-                >
+                  className="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch">
                   <div className="card">
-                    <img src={foto} className="card-img-top" alt="..." />
+                    <img
+                      src={foto}
+                      className="card-img-top"
+                      alt="..."
+                    />
                     <div className="card-body d-flex flex-column">
                       <h5 className="card-title">{item.title}</h5>
                       <p className="card-text">{item.text}</p>
@@ -213,8 +220,7 @@ function RentCamera() {
                         onClick={() => {
                           return "";
                         }}
-                        className="btn btn-primary"
-                      >
+                        className="btn btn-primary">
                         Lihat Produk
                       </Link>
                     </div>

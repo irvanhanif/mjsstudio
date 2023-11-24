@@ -1,0 +1,128 @@
+.confirmation-content {
+  align-items: center;
+  span {
+    height: fit-content;
+  }
+}
+
+.p-dialog-mask {
+  .p-fluid {
+    .form-input-tabel {
+      .input-group {
+        .input-group-text {
+          border-bottom-left-radius: 0;
+          border-top-right-radius: var(--bs-border-radius) !important;
+        }
+
+        input {
+          border-top-right-radius: 0;
+          margin-left: 0 !important;
+          border-bottom-left-radius: var(--bs-border-radius) !important;
+        }
+      }
+    }
+  }
+}
+
+.contentPage {
+  width: calc(100% - 280px);
+  margin-left: 280px;
+
+  @media only screen and (max-width: 900px) {
+    & {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  .contentSection {
+    padding-top: 75px;
+
+    .container {
+      width: 100%;
+
+      form {
+        .form-floating {
+          input,
+          textarea,
+          email,
+          password {
+            &:focus {
+              border: var(--bs-border-width) solid var(--bs-border-color);
+            }
+          }
+          textarea {
+            resize: none;
+            overflow: hidden;
+          }
+          label {
+            font-size: 14px;
+            color: grey;
+          }
+        }
+
+        .btn {
+          font-size: 15px;
+        }
+        @include media-breakpoint-down(sm) {
+          .input-group-text {
+            border-bottom-left-radius: 0;
+            border-top-right-radius: var(--bs-border-radius) !important;
+          }
+          input,
+          textarea {
+            border-top-right-radius: 0;
+            margin-left: 0 !important;
+            border-bottom-left-radius: var(--bs-border-radius) !important;
+          }
+        }
+      }
+      .tableStyle {
+        overflow-x: auto;
+
+        .p-datatable {
+          width: 100%;
+
+          * {
+            font-size: 15px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            .filter button {
+              width: calc(100% - 10px);
+            }
+          }
+          @include media-breakpoint-down(lg) {
+            .filter {
+              margin-bottom: 10px;
+            }
+          }
+          @include media-breakpoint-down(sm) {
+            .exportBtn {
+              margin-top: 10px;
+            }
+            .top-rightTabel {
+              margin-top: 10px;
+
+              .searchText {
+                width: calc(100% - 48px - 0.5rem);
+                input {
+                  width: 100%;
+                }
+              }
+            }
+            .filter button {
+              width: calc(100% - 10px);
+              padding-left: 0.375rem;
+              padding-right: 0.375rem;
+              font-size: 12px;
+            }
+          }
+          .p-paginator .p-paginator-pages .p-paginator-page {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

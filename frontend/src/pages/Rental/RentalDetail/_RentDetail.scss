@@ -1,0 +1,170 @@
+.RentDetailPage {
+  .rentdata {
+    min-height: 100vh;
+    padding-top: 100px;
+
+    .topsection {
+      min-height: 350px;
+      .card {
+        border: none;
+      }
+      .galleryUtama {
+        display: flex;
+        justify-content: center;
+
+        .card {
+          height: 100%;
+          max-width: 540px;
+          background-color: $abu;
+
+          img {
+            height: 100%;
+            object-position: center;
+            object-fit: contain;
+          }
+        }
+      }
+      .productdescription {
+        position: relative;
+        .card {
+          height: calc(100% - 38px);
+          align-items: center;
+        }
+        .buttonSection {
+          .buttonLove {
+            display: flex;
+            max-height: 38px;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              cursor: pointer;
+              height: 100%;
+
+              @include media-breakpoint-down(sm) {
+                & {
+                  height: 1em;
+                  font-size: 30px;
+                }
+              }
+            }
+            .fa-beat {
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+    .bottomsection {
+      position: relative;
+      margin: 25px 0 50px;
+
+      #galleryUtama {
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+
+        .galleryItem {
+          justify-content: center;
+          align-items: center;
+          min-width: calc(25% - 10px);
+          max-width: 200px;
+          margin-right: 10px;
+
+          &:nth-last-child(1) {
+            margin-right: 0;
+          }
+
+          img {
+            max-height: 150px;
+            height: fit-content;
+            width: fit-content;
+            max-width: 100%;
+            cursor: pointer;
+          }
+        }
+        .leftBtn,
+        .rightBtn {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+
+          &:hover {
+            .btnscrollr,
+            .btnscrolll {
+              justify-content: center;
+              transform: translateX(0px);
+              background-color: rgb(245, 245, 245, 0.65);
+              transition: 0.25s;
+            }
+          }
+
+          .btnscrollr,
+          .btnscrolll {
+            width: 30px;
+            height: 100%;
+            transition: 0.25s;
+            align-items: center;
+            display: flex;
+            border-radius: var(--bs-border-radius);
+          }
+
+          svg {
+            font-size: 25px;
+            color: $hitam;
+          }
+        }
+        .leftBtn {
+          left: -10px;
+
+          &:hover .btnscrolll {
+            transform: translateX(10px);
+          }
+          .btnscrolll {
+            justify-content: start;
+          }
+        }
+        .rightBtn {
+          right: -10px;
+          justify-content: end;
+          display: flex;
+
+          &:hover .btnscrollr {
+            transform: translateX(-10px);
+          }
+          .btnscrollr {
+            justify-content: end;
+          }
+        }
+
+        @include media-breakpoint-down(sm) {
+          .leftBtn {
+            left: 0px;
+          }
+          .rightBtn {
+            right: 0px;
+          }
+        }
+        @media only screen and (max-width: 400px) {
+          .leftBtn,
+          .rightBtn {
+            .btnscrollr,
+            .btnscrolll {
+              transform: translateX(0px);
+              justify-content: center;
+              background-color: rgb(245, 245, 245, 0.65);
+              transition: 0.25s;
+            }
+            &:hover {
+              .btnscrollr,
+              .btnscrolll {
+                transform: translateX(0px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+.BookingDetail {
+  // min-height: 100vh;
+  padding-top: 125px;
+  @include media-breakpoint-down(sm) {
+    & {
+      padding-top: 100px;
+    }
+  }
+
+  .container {
+    // min-height: 100%;
+
+    .selected {
+      background-color: powderblue;
+    }
+    .topdetail {
+      .col-sm-5 {
+        max-height: 300px;
+        display: flex;
+        justify-content: center;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+
+        @include media-breakpoint-down(md) {
+          img {
+            margin: auto;
+            width: 100%;
+            height: fit-content;
+          }
+          & {
+            max-height: none;
+          }
+        }
+        @include media-breakpoint-down(sm) {
+          & {
+            max-height: 350px;
+            img {
+              object-fit: contain;
+              max-height: 100%;
+            }
+          }
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        .col-sm-7 {
+          margin-top: 25px;
+          justify-content: center;
+          text-align: center;
+
+          .people,
+          .pilihUkuran {
+            justify-content: center;
+          }
+        }
+      }
+      .card-title {
+        font-size: xx-large;
+      }
+
+      .pilihUkuran {
+        margin-left: 0rem;
+        button {
+          // width: calc(33.33% - 1rem);
+          &:hover.selected {
+            background-color: powderblue;
+          }
+        }
+      }
+
+      .people {
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          display: none;
+        }
+
+        input:focus {
+          border: var(--bs-border-width) solid var(--bs-border-color);
+        }
+
+        .col-2 {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            &:hover {
+              background-color: whitesmoke;
+            }
+          }
+        }
+      }
+    }
+    .bookSection {
+      justify-content: center;
+      .col-10 {
+        .col-6 {
+          max-width: 350px;
+        }
+        .day {
+          .form-control {
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+              background-color: whitesmoke;
+
+              &.selected {
+                background-color: powderblue;
+              }
+            }
+
+            .infoDay {
+              font-size: small;
+            }
+
+            .todayToast {
+              font-size: small;
+              position: absolute;
+              left: 15px;
+              top: -10px;
+              transform: rotate(-15deg);
+
+              @include media-breakpoint-down(lg) {
+                & {
+                  left: -10px;
+                  transform: rotate(-25deg);
+                }
+              }
+
+              @include media-breakpoint-down(lg) {
+                & {
+                  left: -20px;
+                  top: -20px;
+                }
+              }
+            }
+          }
+        }
+        .time {
+          .card-body {
+            // height: 493px;
+
+            .container {
+              height: 100%;
+              padding: 0;
+
+              .buttontime {
+                cursor: pointer;
+                text-align: center;
+
+                &:hover {
+                  background-color: whitesmoke;
+
+                  &.selected {
+                    background-color: powderblue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

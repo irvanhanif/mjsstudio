@@ -1,0 +1,188 @@
+.CartPage {
+  padding-top: 100px;
+
+  .container {
+    min-height: calc(100vh - 134px - 3rem);
+    text-align: center;
+
+    .card {
+      .card-body {
+        overflow-x: auto;
+        .cartTabel {
+          min-width: 460px;
+        }
+
+        .row {
+          display: flex;
+          justify-content: center;
+
+          .image-cart {
+            justify-content: center;
+            display: flex;
+            img {
+              width: 100%;
+            }
+          }
+          .col-3,
+          .col-4,
+          .col-2,
+          .col-1 {
+            align-items: center;
+            display: flex;
+          }
+          h6,
+          p {
+            width: 100%;
+            margin-bottom: 0;
+            font-size: 15px;
+          }
+          .col-3 button {
+            font-size: 15px;
+          }
+          .col-2 button {
+            height: fit-content;
+            font-size: smaller;
+            width: fit-content;
+            padding: 6px 10px;
+          }
+        }
+      }
+      .pagination {
+        justify-content: center;
+
+        .page-item {
+          .page-link {
+            font-size: 14px;
+            &:focus {
+              -webkit-box-shadow: none;
+              outline: -webkit-focus-ring-color auto 0px;
+            }
+          }
+          .page-link:not(.prev-btn, .next-btn) {
+            border-color: transparent;
+            background-color: whitesmoke;
+            color: $hitamPekat;
+
+            &:hover {
+              background-color: $abu;
+            }
+          }
+
+          &.active .page-link {
+            background-color: #6c757d;
+            border-color: transparent;
+            color: whitesmoke;
+
+            &:hover {
+              background-color: #5c636a;
+            }
+          }
+
+          .page-link:is(.prev-btn, .next-btn) {
+            border-color: transparent;
+            background-color: var(--bs-secondary-bg);
+            color: $hitamPekat;
+
+            &:hover {
+              background-color: $hitam;
+              color: whitesmoke;
+            }
+          }
+          &.disabled {
+            .page-link {
+              color: rgba(33, 37, 41, 0.35);
+            }
+          }
+          @include media-breakpoint-down(md) {
+            .page-link {
+              font-size: 13px;
+            }
+          }
+          @include media-breakpoint-down(sm) {
+            .page-link {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      &.rincian,
+      &.personalInfo {
+        overflow-x: visible;
+
+        .card-body {
+          min-width: auto;
+
+          .row {
+            gap: 1rem 0;
+          }
+          .input-group {
+            * {
+              font-size: 15px;
+              text-align: left;
+            }
+            input:focus {
+              border: var(--bs-border-width) solid var(--bs-border-color);
+            }
+            &.alamatIn {
+              .input-group-text {
+                border-bottom-left-radius: 0;
+                border-top-right-radius: var(--bs-border-radius) !important;
+              }
+              textarea {
+                text-align: left;
+                border-top-right-radius: 0;
+                margin-left: 0;
+                border-bottom-left-radius: var(--bs-border-radius) !important;
+                resize: none;
+              }
+            }
+
+            @include media-breakpoint-up(md) {
+              &.col-md-6 {
+                width: 50% !important;
+              }
+            }
+            @media only screen and (max-width: 640px) {
+              .input-group-text {
+                font-size: 13px;
+              }
+            }
+            @media only screen and (max-width: 450px) {
+              .input-group-text {
+                text-wrap: wrap;
+              }
+            }
+            @include media-breakpoint-down(sm) {
+              .input-group-text {
+                width: 100%;
+                border-bottom-left-radius: 0;
+                text-align: left;
+                border-top-right-radius: var(--bs-border-radius) !important;
+              }
+              input.form-control {
+                text-align: left;
+                border-top-right-radius: 0;
+                margin-left: 0;
+                border-bottom-left-radius: var(--bs-border-radius) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      & {
+        max-width: 670px;
+
+        .card .card-body .row {
+          p,
+          h6,
+          .col-3 button {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
