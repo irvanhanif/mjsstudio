@@ -104,15 +104,6 @@ function BookingForm() {
                   <label htmlFor="floatingInput">No. Whatsapp</label>
                 </div>
                 <div className="col-12 form-floating mb-3">
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="floatingInput"
-                    placeholder="your email"
-                  />
-                  <label htmlFor="floatingInput">Email</label>
-                </div>
-                <div className="col-12 form-floating mb-3">
                   <textarea
                     className="form-control"
                     id="floatingInput"

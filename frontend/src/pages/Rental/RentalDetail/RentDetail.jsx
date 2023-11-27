@@ -20,10 +20,6 @@ function RentDetail() {
     document.getElementById("galleryUtama").scrollBy(side ? -150 : 150, 0);
   }
 
-  // useEffect(() => {
-  //   setGalleryHeight(document.getElementById("galleryUtama").offsetHeight);
-  // }, []);
-
   $(function () {
     $(document).ready(function () {
       $(".galleryItem").ready(function () {

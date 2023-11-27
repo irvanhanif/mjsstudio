@@ -283,7 +283,7 @@ function Cart() {
           </div>
           <div className="row justify-content-center mb-5">
             <div className="col-lg-10 col-12 justify-content-end d-flex btnRentSubmit">
-              <button className="btn btn-success px-5">Sewa Sekarang</button>
+              <button className="btn btn-success px-5">Kirim Data Sewa</button>
             </div>
           </div>
         </form>
